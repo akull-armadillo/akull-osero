@@ -4,20 +4,20 @@
     return;
   }
 
-  // Firebaseの読み込み
+  // Firebaseの読み込み（改行エラーを修正）
   const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js");
   const { getFirestore, doc, setDoc, getDoc, updateDoc, onSnapshot } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js");
 
-  // ★ここにあなたのFirebase設定を貼り付けてください
-  const firebaseConfig =
-  apiKey: "AIzaSyDKmaSa_SBWQrMm9ud52TeXP10SOw4Nz04",
-  authDomain: "akull-831b1.firebaseapp.com",
-  projectId: "akull-831b1",
-  storageBucket: "akull-831b1.firebasestorage.app",
-  messagingSenderId: "28365940765",
-  appId: "1:28365940765:web:6f23ab7454e6476801bef4",
-  measurementId: "G-H86N3B2PDD"
-};
+  // あなたのFirebase設定
+  const firebaseConfig = {
+    apiKey: "AIzaSyDKMaSa_SBWQmM9ud52TeXP10SOw4Nz04",
+    authDomain: "akull-831bl.firebaseapp.com",
+    projectId: "akull-831bl",
+    storageBucket: "akull-831bl.firebasestorage.app",
+    messagingSenderId: "28365940765",
+    appId: "1:28365940765:web:6f23ab7454e6476801bef4",
+    measurementId: "G-H86N3B2PDD"
+  };
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
