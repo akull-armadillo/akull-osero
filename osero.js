@@ -4,11 +4,9 @@
     return;
   }
 
-  // Firebaseの読み込み（改行エラーを修正）
   const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js");
   const { getFirestore, doc, setDoc, getDoc, updateDoc, onSnapshot } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js");
 
-  // あなたのFirebase設定
   const firebaseConfig = {
     apiKey: "AIzaSyDKMaSa_SBWQmM9ud52TeXP10SOw4Nz04",
     authDomain: "akull-831bl.firebaseapp.com",
@@ -22,7 +20,6 @@
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  // UI（モーダル画面）の作成
   const container = document.createElement('div');
   container.id = 'othello-modal';
   container.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:sans-serif;';
